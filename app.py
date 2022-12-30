@@ -28,11 +28,11 @@ Social_Media = {
 Projects = {
     "✅ Movie Recommendation System": {
         "https://github.com/The1one1/Movie_Recommendation_System.git": "It recommends the movies on the basis of movies selected by user.",
-        "Tech Stack": "Python, Streamlit, Pandas, Numpy, Scikit-learn"
+        ":blue[Tech Stack]": "Python, Streamlit, Pandas, Numpy, Scikit-learn"
     },
     "✅ Excel File reader": {
         "https://github.com/The1one1/Excel-file-reader.git": "It reads the excel file and gives the output in the form of a table.",
-        "Tech Stack": "Python, Streamlit, Pandas, Numpy,"
+        ":blue[Tech Stack]": "Python, Streamlit, Pandas, Numpy,"
     }
 }
 
@@ -127,11 +127,14 @@ st.write("#")
 st.subheader("Projects 📚")
 st.write('---')
 for name, detail in Projects.items():
+    col1, col2 = st.columns([1, 2])
     link = list(detail.keys())
     description = list(detail.values())
-    st.write(f"[{name}]({link[0]})")
-    st.write(description[0])
-    st.write(f"{link[1]} : {description[1]}")
+    with col1:
+        st.write(f"[{name}]({link[0]})")
+    with col2:
+        st.write(description[0])
+        st.write(f"{link[1]} : {description[1]}")
 
 
 
