@@ -55,7 +55,6 @@ with open(resume_file, "rb") as pdf_file:
 profile_pic = Image.open(profile_pic)
 
 
-
 # !-- HEro Section --
 col1, col2 = st.columns([1, 1], gap="small")
 
