@@ -4,9 +4,18 @@
 
 * {font-family: Open Sans;}
 
-.css-1v0mbdj.etr89bj1 img {
+
+div.block-container.css-12oz5g7.egzxvld2 {
+    position: relative;
+    padding-top: 0px;
+}
+
+/* for pixing image in centre */
+.css-1v0mbdj.etr89bj1 img {    
     width: 200px;
     border-radius: 50%;
+    margin: 75px;
+    margin-left: 103px;
 }
 
 a {
