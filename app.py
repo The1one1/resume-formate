@@ -1,6 +1,7 @@
-from pathlib import Path
 import streamlit as st
+from pathlib import Path
 from PIL import Image
+from streamlit_extras.mention import mention
 
 
 # !----- Path Settings -----
@@ -41,7 +42,6 @@ st.set_page_config(page_title=Page_Title,
                    page_icon=Page_Icon, layout="centered")
 
 
-
 # ! ----CSS file, PDF and Profile Pic -----
 
 with open(css_file) as f:
@@ -73,15 +73,21 @@ with col2:
     st.write("Email: ", Email)
 
 
-
 # ! --- Social Media Section ---
 
 st.write("#")
 cols = st.columns([1, 1])
 
 for index, (name, link) in enumerate(Social_Media.items()):
-    cols[index].write(f"[{name}]({link})")
+    if index < 1:
+        cols[index].write(f"[{name}]({link})")
 
+with cols[1]:
+    mention(
+        label="github",
+        icon="github",
+        url="https://github.com/The1one1",
+    )
 
 
 # !--- Education Section ---
@@ -119,7 +125,6 @@ with col1:
     )
 
 
-
 # !--- Projects Section ---
 
 st.write("#")
@@ -134,7 +139,6 @@ for name, detail in Projects.items():
     with col2:
         st.write(description[0])
         st.write(f"{link[1]} : {description[1]}")
-
 
 
 # ! --- Experience Section ---

@@ -2,44 +2,51 @@
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 
-* {font-family: Open Sans;}
-
+* {
+  font-family: Open Sans;
+}
 
 div.block-container.css-12oz5g7.egzxvld2 {
-    position: relative;
-    padding-top: 0px;
+  position: relative;
+  padding-top: 0px;
 }
 
 /* for pixing image in centre */
-.css-1v0mbdj.etr89bj1 img {    
-    width: 200px;
-    border-radius: 50%;
-    margin: 75px;
-    margin-left: 103px;
+.css-1v0mbdj.etr89bj1 img {
+  width: 200px;
+  border-radius: 50%;
+  margin: 75px;
+  margin-left: 103px;
 }
 
 a {
-    color: #000;
-    text-decoration: none;
-    font-weight: 500;
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 a:hover {
-    color: #0101ff !important;
-    text-decoration: none;
+  color: #0101ff !important;
+  text-decoration: none;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 hr {
-    border: 0;
-    height: 1px;
-    background: #333;
-    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-header {visibility: hidden;}
+#MainMenu {
+  visibility: hidden;
+}
+footer {
+  visibility: hidden;
+}
+header {
+  visibility: hidden;
+}
