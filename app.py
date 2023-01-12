@@ -17,7 +17,7 @@ profile_pic = current_dir / "assets" / "profile-pic.jpeg"
 Page_Title = "Rahul's Resume"
 Page_Icon = "📄"
 Name = "Rahul Sharma"
-Description = """Upcommig Software Engineer Intern at Microsoft"""
+Description = """Upcomming Software Engineer Intern at Microsoft"""
 Email = "lci2020029@iiitl.ac.in"
 Social_Media = {
     "LinkedIn": "https://www.linkedin.com/in/rahul-sharma-2bba60203/",
@@ -148,7 +148,7 @@ st.subheader("Experience 🏢 ")
 st.write('---')
 st.write(
     """
-    - ✅  Upcoming Software Engineer Intern at Microsoft
+    - ✅  Upcomming Software Engineer Intern at Microsoft
     - ✅  Strong hands on experience in Machine Learning and Deep Learning
     """
 )
