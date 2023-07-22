@@ -27,17 +27,15 @@ Social_Media = {
 }
 
 Projects = {
-    "✅ Movie Recommendation System": {
-        "https://github.com/The1one1/Movie_Recommendation_System.git": "It recommends the movies on the basis of movies selected by user.",
-        ":blue[Tech Stack]": "Python, Streamlit, Pandas, Numpy, Scikit-learn",
+    "✅ DressMate": {
+        "https://github.com/The1one1/DressMate.git": "Clothing recommendation system that provides accurate and personalized recommendations. It includes a :orange[***virtual try-on feature***] that produces realistic and visually appealing virtual try-ons.",
+        ":blue[Tech Stack]": "Python, Streamlit, TensorFlow, ResNet50, Pinecone",
+        "Demo Link": "https://www.linkedin.com/feed/update/urn:li:activity:7056917973499867136?utm_source=share&utm_medium=member_android",
     },
     "✅ Movie Recommendation System": {
         "https://github.com/The1one1/Movie_Recommendation_System.git": "It recommends the movies on the basis of movies selected by user.",
         ":blue[Tech Stack]": "Python, Streamlit, Pandas, Numpy, Scikit-learn",
-    },
-    "✅ Excel File reader": {
-        "https://github.com/The1one1/Excel-file-reader.git": "It reads the excel file and gives the output in the form of a table.",
-        ":blue[Tech Stack]": "Python, Streamlit, Pandas, Numpy,",
+        "App Link": "https://the1one1-resume-formate-app-xawhlf.streamlit.app/",
     },
 }
 
@@ -85,9 +83,12 @@ with col2:
 st.write("#")
 cols = st.columns([1, 1])
 
-for index, (name, link) in enumerate(Social_Media.items()):
-    if index < 1:
-        cols[index].write(f"[{name}]({link})")
+with cols[0]:
+    mention(
+        label="LinkedIn",
+        # icon="LinkedIn",
+        url="https://www.linkedin.com/in/rahul-sharma-2bba60203/",
+    )
 
 with cols[1]:
     mention(
@@ -145,7 +146,10 @@ for name, detail in Projects.items():
         st.write(f"[{name}]({link[0]})")
     with col2:
         st.write(description[0])
+        # linl = description
         st.write(f"{link[1]} : {description[1]}")
+        st.write(f"[{link[2]}]({description[2]})")
+        st.write("---")
 
 
 # ! --- Experience Section ---
