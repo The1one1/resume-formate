@@ -167,8 +167,9 @@ for name, detail in Projects.items():
         st.write("---")
 
 
-# ! --- Experience Section ---
 
+
+# ! --- Experience Section ---
 
 st.write("#")
 st.subheader("Experience 🏢 ")
@@ -189,7 +190,7 @@ for name, detail in Experience.items():
 
 st.write(
     """
-    - ✅  Strong hands on experience in Machine Learning and Deep Learning
+    ✅  Strong hands on experience in Machine Learning and Deep Learning
     """
 )
 
