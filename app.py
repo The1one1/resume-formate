@@ -164,7 +164,10 @@ for name, detail in Projects.items():
         st.write(f"{link[1]} : {description[1]}")
         st.write(f"[{link[2]}]({description[2]})")
         st.write(f"[{link[3]}]({description[3]})")
-        st.write("---")
+        
+        # add new line with --- and add this only if there is a new project
+        if name != "✅ Movie Recommendation System":
+            st.write("---")
 
 
 
