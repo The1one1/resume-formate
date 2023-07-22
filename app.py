@@ -17,7 +17,7 @@ profile_pic = current_dir / "assets" / "profile-pic.jpeg"
 Page_Title = "Rahul's Resume"
 Page_Icon = "📄"
 Name = "Rahul Sharma"
-Description = """Ex Software Engineer Intern at Microsoft"""
+Description = """:orange[Ex-Software Engineer Intern at Microsoft] | B.Tech in Computer Science and Artificial Intelligence | Expert at Codeforces | Max 4⭐ at Codechef"""
 Email = "lci2020029@iiitl.ac.in"
 Social_Media = {
     "LinkedIn": "https://www.linkedin.com/in/rahul-sharma-2bba60203/",
@@ -29,16 +29,28 @@ Social_Media = {
 Projects = {
     "✅ DressMate": {
         "https://github.com/The1one1/DressMate.git": "Clothing recommendation system that provides accurate and personalized recommendations. It includes a :orange[***virtual try-on feature***] that produces realistic and visually appealing virtual try-ons.",
-        ":blue[Tech Stack]": "Python, Streamlit, TensorFlow, ResNet50, Pinecone",
+        ":green[Tech Stack]": "Python, Streamlit, TensorFlow, ResNet50, Pinecone",
+        "Repository Link": "https://github.com/The1one1/DressMate.git",
         "Demo Link": "https://www.linkedin.com/feed/update/urn:li:activity:7056917973499867136?utm_source=share&utm_medium=member_android",
     },
     "✅ Movie Recommendation System": {
         "https://github.com/The1one1/Movie_Recommendation_System.git": "It recommends the movies on the basis of movies selected by user.",
-        ":blue[Tech Stack]": "Python, Streamlit, Pandas, Numpy, Scikit-learn",
+        ":green[Tech Stack]": "Python, Streamlit, Pandas, Numpy, Scikit-learn",
+        "Respository Link": "https://github.com/The1one1/Movie_Recommendation_System.git",
         "App Link": "https://the1one1-resume-formate-app-xawhlf.streamlit.app/",
     },
 }
 
+Experience = {
+    " ✅ Microsoft": {
+        "https://www.linkedin.com/company/microsoft/": "Software Engineer Intern",
+        # add content in decsription in points with :blue[Description] and add new line with and the description is Worked on the development of Data Loss Prevention (DLP) policies. ◦ Created a Dynamic Link Library (DLL) to recommend Sensitive Information Type (SIT)
+        ":green[Description]": "Worked on the development of Data Loss Prevention (DLP) policies. Created a :orange[Dynamic Link Library (DLL)] to recommend :orange[Sensitive Information Type (SIT)].",
+        ":green[Duration]": "May 2021 - July 2021",
+        ":green[Tech Stack]": "C#, XML, Microsoft Azure Cognitive Services, Rest API, XAML",
+        ":blue[Certificate]": "https://drive.google.com/file/d/1ebsILg7vuLgaFwvYIRz4neUqIb5a3yW5/view?usp=sharing",
+    },
+}
 
 st.set_page_config(page_title=Page_Title, page_icon=Page_Icon, layout="centered")
 
@@ -60,11 +72,14 @@ profile_pic = Image.open(profile_pic)
 col1, col2 = st.columns([1, 1], gap="small")
 
 with col1:
-    st.image(profile_pic, width=200)
+    st.image(profile_pic, width=400)
 
 with col2:
     st.title(Name)
-    st.write(Description)
+    items = Description.split("|")
+    
+    for item in items:
+        st.write(f"✅ {item}")
 
     # add direct link to download resume
 
@@ -146,20 +161,34 @@ for name, detail in Projects.items():
         st.write(f"[{name}]({link[0]})")
     with col2:
         st.write(description[0])
-        # linl = description
         st.write(f"{link[1]} : {description[1]}")
         st.write(f"[{link[2]}]({description[2]})")
+        st.write(f"[{link[3]}]({description[3]})")
         st.write("---")
 
 
 # ! --- Experience Section ---
 
+
 st.write("#")
 st.subheader("Experience 🏢 ")
 st.write("---")
+for name, detail in Experience.items():
+    col1, col2 = st.columns([1, 2])
+    link = list(detail.keys())
+    description = list(detail.values())
+    with col1:
+        st.write(f"[{name}]({link[0]})")
+    with col2:
+        st.write(description[0])
+        st.write(f"{link[1]} : {description[1]}")
+        st.write(f"{link[2]} : {description[2]}")
+        st.write(f"{link[3]} : {description[3]}")
+        st.write(f"[{link[4]}]({description[4]})")
+        st.write("---")
+
 st.write(
     """
-    - ✅  Upcomming Software Engineer Intern at Microsoft
     - ✅  Strong hands on experience in Machine Learning and Deep Learning
     """
 )
@@ -169,17 +198,18 @@ st.write(
 st.write("#")
 st.subheader("Hard Skills 💻")
 st.write("---")
+    # - ✅  :green[Database]: MySQL, MongoDB
 st.write(
     """
-    - ✅  Programming: Python (scikit-learn, pandas, numpy), C++, SQL
+    - ✅  :green[Programming]: Python (TensorFlow, scikit-learn, pandas, numpy), C++, c#, XML
     - ✅  Machine Learning and Deep Learning
-    - ✅  Database: MySQL, MongoDB
-    - ✅  Technologies: Git, [Github](https://github.com/The1one1), [Google Cloud](https://drive.google.com/file/d/1tY1qlHoWfRiN3mS7_JDYeozE4g1oqGqh/view?usp=drivesdk/), Jupyter Notebook, Vs Code, Sublime Text
-    - ✅  Frameworks: Streamlit
+    - ✅  :green[Technologies]: Git, [Github](https://github.com/The1one1), [Google Cloud](https://drive.google.com/file/d/1tY1qlHoWfRiN3mS7_JDYeozE4g1oqGqh/view?usp=drivesdk/), Jupyter Notebook, Vs Code, Sublime Text
+    - ✅  :green[Frameworks]: Streamlit
     """
 )
 
 # !--- Coding Section ---
+    # - ✅  [HackerRank]( https://www.hackerearth.com/@rahul9038/)
 st.write("#")
 st.subheader("Coding Profiles 📝")
 st.write("---")
@@ -188,7 +218,6 @@ st.write(
     - ✅  [CodeForces]( https://codeforces.com/profile/Aswathama./)
     - ✅  [LeetCode]( https://leetcode.com/Ra1Sharma/)
     - ✅  [CodeChef]( https://www.codechef.com/users/rahul_00101/)
-    - ✅  [HackerRank]( https://www.hackerearth.com/@rahul9038/)
     - ✅  [GeeksForGeeks]( https://auth.geeksforgeeks.org/user/rahulsharma22459/profile/)
     """
 )
