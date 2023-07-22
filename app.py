@@ -17,7 +17,7 @@ profile_pic = current_dir / "assets" / "profile-pic.jpeg"
 Page_Title = "Rahul's Resume"
 Page_Icon = "📄"
 Name = "Rahul Sharma"
-Description = """Upcomming Software Engineer Intern at Microsoft"""
+Description = """Ex Software Engineer Intern at Microsoft"""
 Email = "lci2020029@iiitl.ac.in"
 Social_Media = {
     "LinkedIn": "https://www.linkedin.com/in/rahul-sharma-2bba60203/",
@@ -29,23 +29,26 @@ Social_Media = {
 Projects = {
     "✅ Movie Recommendation System": {
         "https://github.com/The1one1/Movie_Recommendation_System.git": "It recommends the movies on the basis of movies selected by user.",
-        ":blue[Tech Stack]": "Python, Streamlit, Pandas, Numpy, Scikit-learn"
+        ":blue[Tech Stack]": "Python, Streamlit, Pandas, Numpy, Scikit-learn",
+    },
+    "✅ Movie Recommendation System": {
+        "https://github.com/The1one1/Movie_Recommendation_System.git": "It recommends the movies on the basis of movies selected by user.",
+        ":blue[Tech Stack]": "Python, Streamlit, Pandas, Numpy, Scikit-learn",
     },
     "✅ Excel File reader": {
         "https://github.com/The1one1/Excel-file-reader.git": "It reads the excel file and gives the output in the form of a table.",
-        ":blue[Tech Stack]": "Python, Streamlit, Pandas, Numpy,"
-    }
+        ":blue[Tech Stack]": "Python, Streamlit, Pandas, Numpy,",
+    },
 }
 
 
-st.set_page_config(page_title=Page_Title,
-                   page_icon=Page_Icon, layout="centered")
+st.set_page_config(page_title=Page_Title, page_icon=Page_Icon, layout="centered")
 
 
 # ! ----CSS file, PDF and Profile Pic -----
 
 with open(css_file) as f:
-    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
 with open(resume_file, "rb") as pdf_file:
@@ -64,6 +67,10 @@ with col1:
 with col2:
     st.title(Name)
     st.write(Description)
+
+    # add direct link to download resume
+
+
     st.download_button(
         label="Download Resume",
         data=PDFbyte,
@@ -94,7 +101,7 @@ with cols[1]:
 
 st.write("#")
 st.write("## Education 🎓")
-st.write('---')
+st.write("---")
 
 col1, col2 = st.columns([4, 1])
 
@@ -129,7 +136,7 @@ with col1:
 
 st.write("#")
 st.subheader("Projects 📚")
-st.write('---')
+st.write("---")
 for name, detail in Projects.items():
     col1, col2 = st.columns([1, 2])
     link = list(detail.keys())
@@ -145,7 +152,7 @@ for name, detail in Projects.items():
 
 st.write("#")
 st.subheader("Experience 🏢 ")
-st.write('---')
+st.write("---")
 st.write(
     """
     - ✅  Upcomming Software Engineer Intern at Microsoft
@@ -157,7 +164,7 @@ st.write(
 # !---Skills Section ---
 st.write("#")
 st.subheader("Hard Skills 💻")
-st.write('---')
+st.write("---")
 st.write(
     """
     - ✅  Programming: Python (scikit-learn, pandas, numpy), C++, SQL
@@ -171,7 +178,7 @@ st.write(
 # !--- Coding Section ---
 st.write("#")
 st.subheader("Coding Profiles 📝")
-st.write('---')
+st.write("---")
 st.write(
     """
     - ✅  [CodeForces]( https://codeforces.com/profile/Aswathama./)
