@@ -226,7 +226,7 @@ st.write(
     """
     - ✅  :green[Programming]: Python (TensorFlow, scikit-learn, pandas, numpy), C++, c#, XML
     - ✅  Machine Learning and Deep Learning
-    - ✅  :green[Technologies]: Git, [Github](https://github.com/The1one1), [Google Cloud](https://drive.google.com/file/d/1tY1qlHoWfRiN3mS7_JDYeozE4g1oqGqh/view?usp=drivesdk/), Jupyter Notebook, Vs Code, Sublime Text
+    - ✅  :green[Technologies]: Git, [Github](https://github.com/The1one1), [Google Cloud](https://drive.google.com/file/d/1tY1qlHoWfRiN3mS7_JDYeozE4g1oqGqh/view?usp=drivesdk/), Jupyter Notebook, Visual Studio, Sublime Text
     - ✅  :green[Frameworks]: Streamlit
     """
 )
