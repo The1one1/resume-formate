@@ -4,12 +4,14 @@ from PIL import Image
 from streamlit_extras.mention import mention
 
 
+
 # !----- Path Settings -----
 
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 css_file = current_dir / "style" / "main.css"
 resume_file = current_dir / "assets" / "Rahul_Resume.pdf"
 profile_pic = current_dir / "assets" / "profile-pic.jpeg"
+
 
 
 # !----- General Settings ---
@@ -55,6 +57,8 @@ Experience = {
 st.set_page_config(page_title=Page_Title, page_icon=Page_Icon, layout="centered")
 
 
+
+
 # ! ----CSS file, PDF and Profile Pic -----
 
 with open(css_file) as f:
@@ -66,6 +70,8 @@ with open(resume_file, "rb") as pdf_file:
 
 
 profile_pic = Image.open(profile_pic)
+
+
 
 
 # !-- HEro Section --
@@ -93,6 +99,9 @@ with col2:
     st.write("Email: ", Email)
 
 
+
+
+
 # ! --- Social Media Section ---
 
 st.write("#")
@@ -111,6 +120,9 @@ with cols[1]:
         icon="github",
         url="https://github.com/The1one1",
     )
+
+
+
 
 
 # !--- Education Section ---
@@ -148,6 +160,9 @@ with col1:
     )
 
 
+
+
+
 # !--- Projects Section ---
 
 st.write("#")
@@ -168,6 +183,8 @@ for name, detail in Projects.items():
         # add new line with --- and add this only if there is a new project
         if name != "✅ Movie Recommendation System":
             st.write("---")
+
+
 
 
 
@@ -198,9 +215,11 @@ st.write(
 )
 
 
+
+
 # !---Skills Section ---
 st.write("#")
-st.subheader("Hard Skills 💻")
+st.subheader("Technical Skills 💻")
 st.write("---")
     # - ✅  :green[Database]: MySQL, MongoDB
 st.write(
