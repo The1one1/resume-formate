@@ -239,7 +239,7 @@ st.write("---")
 st.write(
     """
     - ✅  [CodeForces Expert Account]( https://codeforces.com/profile/brickiq)
-    - ✅  [Practice Codeforces Account:]( https://codeforces.com/profile/Aswathama./)
+    - ✅  [Codeforces Practice Account:]( https://codeforces.com/profile/Aswathama./)
     - ✅  [LeetCode]( https://leetcode.com/Ra1Sharma/)
     - ✅  [CodeChef]( https://www.codechef.com/users/rahul_00101/)
     """
