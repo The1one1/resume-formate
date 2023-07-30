@@ -162,33 +162,6 @@ with col1:
 
 
 
-
-# !--- Projects Section ---
-
-st.write("#")
-st.subheader("Projects 📚")
-st.write("---")
-for name, detail in Projects.items():
-    col1, col2 = st.columns([1, 2])
-    link = list(detail.keys())
-    description = list(detail.values())
-    with col1:
-        st.write(f"[{name}]({link[0]})")
-    with col2:
-        st.write(description[0])
-        st.write(f"{link[1]} : {description[1]}")
-        st.write(f"[{link[2]}]({description[2]})")
-        st.write(f"[{link[3]}]({description[3]})")
-        
-        # add new line with --- and add this only if there is a new project
-        if name != "✅ Movie Recommendation System":
-            st.write("---")
-
-
-
-
-
-
 # ! --- Experience Section ---
 
 st.write("#")
@@ -217,6 +190,33 @@ st.write(
 
 
 
+# !--- Projects Section ---
+
+st.write("#")
+st.subheader("Projects 📚")
+st.write("---")
+for name, detail in Projects.items():
+    col1, col2 = st.columns([1, 2])
+    link = list(detail.keys())
+    description = list(detail.values())
+    with col1:
+        st.write(f"[{name}]({link[0]})")
+    with col2:
+        st.write(description[0])
+        st.write(f"{link[1]} : {description[1]}")
+        st.write(f"[{link[2]}]({description[2]})")
+        st.write(f"[{link[3]}]({description[3]})")
+        
+        # add new line with --- and add this only if there is a new project
+        if name != "✅ Movie Recommendation System":
+            st.write("---")
+
+
+
+
+
+
+
 # !---Skills Section ---
 st.write("#")
 st.subheader("Technical Skills 💻")
@@ -226,7 +226,7 @@ st.write(
     """
     - ✅  :green[Programming]: Python (TensorFlow, scikit-learn, pandas, numpy), C++, c#, XML
     - ✅  Machine Learning and Deep Learning
-    - ✅  :green[Technologies]: Git, [Github](https://github.com/The1one1), [Google Cloud](https://drive.google.com/file/d/1tY1qlHoWfRiN3mS7_JDYeozE4g1oqGqh/view?usp=drivesdk/), Jupyter Notebook, Visual Studio, Sublime Text
+    - ✅  :green[Technologies]: Git, [Github](https://github.com/The1one1), Microsft Azure DecOps, Azure Machine Learning, [Google Cloud](https://drive.google.com/file/d/1tY1qlHoWfRiN3mS7_JDYeozE4g1oqGqh/view?usp=drivesdk/), Jupyter Notebook, Visual Studio, Sublime Text
     - ✅  :green[Frameworks]: Streamlit
     """
 )
@@ -238,9 +238,10 @@ st.subheader("Coding Profiles 📝")
 st.write("---")
 st.write(
     """
-    - ✅  [CodeForces]( https://codeforces.com/profile/Aswathama./)
+    - ✅  [CodeForces Expert Account]( https://codeforces.com/profile/brickiq)
+    - ✅  [Practice Codeforces Account:]( https://codeforces.com/profile/Aswathama./)
     - ✅  [LeetCode]( https://leetcode.com/Ra1Sharma/)
     - ✅  [CodeChef]( https://www.codechef.com/users/rahul_00101/)
-    - ✅  [GeeksForGeeks]( https://auth.geeksforgeeks.org/user/rahulsharma22459/profile/)
     """
 )
+    # - ✅  [GeeksForGeeks]( https://auth.geeksforgeeks.org/user/rahulsharma22459/profile/)
